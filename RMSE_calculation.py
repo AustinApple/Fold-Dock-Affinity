@@ -150,7 +150,12 @@ def extract_ligands(pdb_id, chain_id = 'A'):
                 i += 1
                 
 if __name__ == '__main__':
-    # data = pd.read_csv("davis_train_overlap_rcsb_modified.csv", index_col=0).iloc[:3, :]
+    
+    '''
+    fetch the pdb file from rcsb and alphafold -> align two structures -> get the rotation matrix and translation matrix ->
+    extract the ligand -> align the ligand -> calculate the rmse
+    '''
+    
     data = pd.read_csv("davis_train_overlap_rcsb_modified.csv", index_col=0)
     data = data[data['pdbid'] == '5MO4']
     with open('ligand_positions_rank1.pkl', 'rb') as f:
