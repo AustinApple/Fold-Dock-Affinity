@@ -4,6 +4,8 @@ I utilized DiffDock, a diffusion-based docking approach, to predict protein-liga
 
 I utilized RDKit, an open-source cheminformatics software, to construct three-dimensional ligand structures from molecular SMILES. For three-dimensional protein structures, I leveraged the AlphaFold Protein Structure Database, where protein folding structures are directly curated through AlphaFold prediction. Both three-dimensional protein and ligand structures were represented as heterogeneous geometric graphs, with nodes representing heavy atoms and edges representing bond types. In order to assess the effectiveness of our methods, I utilized the DAVIS dataset, a well-known benchmark dataset for protein-ligand affinity prediction models. DAVIS comprises 442 proteins, 68 ligands, and 25,772 binding affinity measurements $K_{d}$. However, the truncated $K_{d}$ ($K_{d}$ values are below the limits of the measurement equipment) make up the majority of the DAVIS dataset (around 72%), which leads to challenges in the model training.
 
+## Percentage of pose predictions passing quality checks from the PoseBusters tool
+![posebuster_criteria](image/posebuster_diffdock_davis.png)
 ## RMSE of pose V.S. Error of affinity prediction (among different complexes)
 ![pose_RMSE_affinity_error](image/pose_RMSE_affinity_error.svg)
 It seems that there is no correlation between deviation of pose and error of affinity prediction.
