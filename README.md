@@ -1,4 +1,4 @@
-# Modeling three-dimensional protein-ligand structures to predict binding affinities
+# Fold a protein, Dock a ligand, predict the binding Affinity
 ![davis_3d_assumption](image/davis_3d_assumption.jpg)
 (a) 1D-based models predict binding affinity from a protein sequence and a molecular SMILES. (b) 3D-based models predict binding affinity directly from the experimentally determined bound structures. (c) My work starts from protein amino acid sequences and molecular SMILES.(d) My work is based on three key assumptions: Assumption 1: Alphafold has the capability to produce a binding pocket structure at atom-level accuracy. Assumption 2: DiffDock possesses the capability to generate promising ligand binding poses. Assumption 3: A predictor can maintain accurate predictions of protein-ligand binding affinity, even in the presence of certain deviations introduced by preceding Alphafold or DiffDock processes.
 
